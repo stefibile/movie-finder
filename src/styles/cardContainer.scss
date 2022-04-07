@@ -1,0 +1,25 @@
+
+.reel {
+    margin: 32px 24px;
+    .reel-info {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        .reel-title {
+            font-size: 21px;
+            font-weight: 600;
+            color: #cccccc;
+            text-transform: capitalize;
+        }
+        a {
+            color: yellow;
+            font-weight: 500;
+            margin-top: 5px;
+        }
+    }
+    .card-container {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 16px;
+    }
+}
