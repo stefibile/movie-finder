@@ -1,14 +1,15 @@
 import { Link } from "react-router-dom";
+import "../styles/navBar.scss";
 
 const NavBar = () => {
   return (
-    <div>
+    <div className="navbar">
       <ul>
         <li>
           <Link to="/">Home</Link>
         </li>
         <li>
-          <Link to="/movies">Movies</Link>
+          <Link to="/movie">Movies</Link>
         </li>
         <li>
           <Link to="/tv">Tv</Link>

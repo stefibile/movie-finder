@@ -1,0 +1,12 @@
+body {
+    width: 100%;
+    height: 100vh;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    background: #1b1b1b;
+    color: white;
+}
+body > div#root {
+    width: 100%;
+}
