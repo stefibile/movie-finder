@@ -3,14 +3,10 @@ import { Link } from "react-router-dom";
 import Card from "./Card";
 import "../styles/cardContainer.scss";
 
-const CardContainer = ({ title, mediaType, url, reel, page }) => {
+const CardContainer = ({ title, mediaType, url, reel, page, type }) => {
   const [mediaList, setMedia] = useState([]);
   let cardAmount = 5;
   const width = window.innerWidth;
-
-  if (width <= 1150) cardAmount = 4;
-  if (width >= 1350) cardAmount = 6;
-  if (width >= 1500) cardAmount = 7;
 
   useEffect(() => {
     fetch(
@@ -18,7 +14,17 @@ const CardContainer = ({ title, mediaType, url, reel, page }) => {
     )
       .then((res) => res.json())
       .then((data) => setMedia(data.results));
-  }, [page]);
+  }, [page, mediaType, url]);
+
+  const defineWidth = () => {
+    if (width <= 700) cardAmount = 4;
+    else if (width <= 920) cardAmount = 3;
+    else if (width <= 1150) cardAmount = 4;
+    else if (width >= 1350) cardAmount = 6;
+    else if (width >= 1500) cardAmount = 7;
+  }
+
+  defineWidth();
 
   return (
     <div className="reel">

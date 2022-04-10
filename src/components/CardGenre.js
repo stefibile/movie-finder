@@ -15,7 +15,7 @@ const CardGenre = ({ mediaType }) => {
     <div className="genre-section">
       <CardContainer title={params.genre} mediaType={mediaType} url={params.genre} reel="isNotReel" page={page} />
       <div className="pagination">
-        <button className="back" onClick={paginationHandleBack}>👈</button>
+        <button className="back" onClick={paginationHandleBack}>{page > 1 ? '👈': ''}</button>
         <input value={page} onChange={paginationHandleChange}></input>
         <button className="forward" onClick={paginationHandleForward}>👉</button>
       </div>

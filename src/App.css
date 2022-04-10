@@ -6,7 +6,32 @@ body {
     display: flex;
     background: #1b1b1b;
     color: white;
+    scrollbar-color: dark;
 }
 body > div#root {
     width: 100%;
 }
+
+.hidden {
+    display: none;
+}
+
+html {
+    --scrollbarBG: #222;
+    --thumbBG: #333;
+  }
+  body::-webkit-scrollbar, .detail-info::-webkit-scrollbar {
+    width: 8px;
+  }
+  body, .detail-info {
+    scrollbar-width: thin;
+    scrollbar-color: var(--thumbBG) var(--scrollbarBG);
+  }
+  body::-webkit-scrollbar-track, .detail-info::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  body::-webkit-scrollbar-thumb, .detail-info::-webkit-scrollbar-thumb {
+    background-color: var(--thumbBG) ;
+    border-radius: 4px;
+    border: 3px solid transparent;
+  }
