@@ -1,0 +1,21 @@
+.input-container {
+    position: absolute;
+    z-index: 2;
+    background: #1b1b1b;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 20px;
+    width: 100%;
+    .search-input {
+        width: 96%;
+        border: 0;
+        box-shadow: none;
+        padding: 0;
+        height: 40px;
+        background: #333;
+        color: white;
+        text-align: center;
+        font-size: 18px;
+    }
+}

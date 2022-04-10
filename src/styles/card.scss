@@ -7,7 +7,7 @@
     background: #333333;
     border-radius: 10px;
     overflow: hidden;
-    flex-grow: 1 1 200px;
+    flex: 1 1 200px;
     &:hover {
         transform: scale(1.04);
         transition: transform .1s ease;
@@ -36,4 +36,5 @@ a {
     display: flex;
     flex-grow: 1;
     width: 200px;
+    max-width: 300px;
 }

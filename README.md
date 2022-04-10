@@ -1,3 +1,38 @@
+![Imagén ilustrativa de presentación del proyecto](src/img/home.png)
+
+## Movie Finder 
+
+### Ultimo proyecto realizado durante la cursada de la carrera de desarrollo Frontend en ADAITW. 
+### Objetivo: Crear un buscador de películas y series utilizando REACT. Nos comunicamos con una API publica, trayendo información de la misma. 
+
+
+## Funcionalidad:
+
+- Página web responsive.
+- Buscador de películas y series.
+- 
+
+## Construida con:
+- HTML 5
+- Procesador de css: Sass
+- JavaScript
+- REACT
+- GIT
+- Deploy: Netlify
+
+## Implementaciones:
+
+- Componentes
+- Props
+- Renderizado condicional 
+- BrowserRouter
+- Hooks 
+
+
+[Mira mi trabajo aquí](https://media-finder-app.netlify.app/)
+
+------------------------------------------------------------------------------------------------------
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
