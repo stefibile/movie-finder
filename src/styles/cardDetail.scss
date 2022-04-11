@@ -44,3 +44,12 @@
         background: #666;
     }
 }
+
+@media (max-width: 700px) {
+    .detail-container {
+        flex-direction: column;
+    }
+    .trailer {
+        margin: 20px auto 0 auto;
+    }
+}

@@ -19,12 +19,14 @@ img.poster {
     width: 100%;
     object-fit: cover;
     max-height: 600px;
+    min-height: 500px;
 }
 
 .poster-container {
     display: flex !important;
     align-items: center;
     justify-content: center;
+
     .poster-info {
         position: absolute;
         display: flex;
@@ -37,19 +39,35 @@ img.poster {
         max-width: 600px;
         padding: 30px;
         color: white;
+
         &:hover {
             box-shadow: 0px 0px 20px #999;
             transition: box-shadow .3s ease;
         }
+
         .title {
             font-size: 28px;
         }
+
         p {
             text-align: center;
         }
     }
 }
 
-.slick-prev:before, .slick-next:before {
+.slick-prev:before,
+.slick-next:before {
     font-size: 30px;
+}
+
+@media (max-width: 700px) {
+    .slick-track {
+        height: auto;
+    }
+
+    .poster-container .poster-info {
+        width: 100%;
+        min-width: none;
+        width: 350px;
+    }
 }
