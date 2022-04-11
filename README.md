@@ -8,9 +8,7 @@
 
 ## Funcionalidad:
 
-- Página web responsive.
-- Buscador de películas y series.
-- 
+- Buscador de películas, series y actores.
 
 ## Construida con:
 - HTML 5
