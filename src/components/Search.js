@@ -19,6 +19,9 @@ const Search = () => {
         placeholder="Find what you want here"
       />
       {/* Querida Male: No pude encontrar mejor manera de limitar el fetch con espacios vacíos que rompen la app */}
+      {/* existe el metodo trim() que nos permite borrar espacios vacios de un string: */}
+      {/* searchValue.trim() === "" && */}
+      {/* con eso ya lo dejas resuelto. igual lo hicste re bien! */}
       {searchValue !== "" && searchValue !== " " && searchValue !== "  " && (
         <SearchContainer searchValue={searchValue} />
       )}

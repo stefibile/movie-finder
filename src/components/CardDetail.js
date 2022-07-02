@@ -11,6 +11,7 @@ const CardDetail = ({ mediaType }) => {
     <a href={`https://youtu.be/${trailer.key}`} className="trailer">📽 See trailer</a>
   ))
 
+  // podes poner dos fetch en el mismo useEffect, asi no repetis tanto
   useEffect(() => {
     fetch(`https://api.themoviedb.org/3/${mediaType}/${params.mediaUrl}?api_key=373eecafbff0160b817ed626c7213572`)
     .then(res => res.json())
@@ -23,6 +24,7 @@ const CardDetail = ({ mediaType }) => {
     .then(data => setTrailer(data.results))
   }, [mediaType, params.mediaUrl])
   
+  // que hace esto aca?
   TrailerButton();
 
   return (

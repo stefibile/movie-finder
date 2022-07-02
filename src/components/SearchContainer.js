@@ -17,6 +17,7 @@ const CardContainer = ({ title, searchValue }) => {
     <div className="reel type-search">
       <div className="reel-info">
         <h3 className="reel-title">{`${
+          // que lindo como resolviste esto!
           mediaList.length === 0 ? "No " : ""
         }Results found for ${searchValue}`}</h3>
       </div>

@@ -17,6 +17,7 @@ const CardContainer = ({ title, mediaType, url, reel, page, type }) => {
   }, [page, mediaType, url]);
 
   const defineWidth = () => {
+    // muy bien resuelto!
     if (width <= 700) cardAmount = 4;
     else if (width <= 920) cardAmount = 3;
     else if (width <= 1150) cardAmount = 4;
@@ -33,12 +34,29 @@ const CardContainer = ({ title, mediaType, url, reel, page, type }) => {
         {reel === "isReel" && <Link to={mediaType + '/genre/' + url} >See more</Link>}
       </div>
       <div className="card-container">
+        {/* Para no repetir tanto codigo, podriamos hacer:
+
+        arriba, antes del return, esta constante:
+        const movies = reel === "isReel" ? mediaList :   mediaList.slice(0, `${cardAmount}`)
+        y despues aca directamente 
+       { movies.map((media) => (
+            <Card
+              title={mediaType === "movie" ? media.title : media.name}
+              img={`https://image.tmdb.org/t/p/w300/${media.poster_path}`}
+              url={`/${media.id}`}
+              key={media.id}
+              mediaType={mediaType}
+            />
+            ))} */}
+
         {reel === "isReel" &&
           mediaList
             .slice(0, `${cardAmount}`)
             .map((media) => (
               <Card
                 title={mediaType === "movie" ? media.title : media.name}
+                // si la api no te devuelve una imagen, esto se va a ver roto: deberias tener una imagen local que te sirva de placeholder
+                // img={media.poster_path ? `https://image.tmdb.org/t/p/w300/${media.poster_path}` : linkImagenLocal}
                 img={`https://image.tmdb.org/t/p/w300/${media.poster_path}`}
                 url={`/${media.id}`}
                 key={media.id}
@@ -49,6 +67,7 @@ const CardContainer = ({ title, mediaType, url, reel, page, type }) => {
           mediaList.map((media) => (
             <Card
               title={mediaType === "movie" ? media.title : media.name}
+              // mismo aca
               img={`https://image.tmdb.org/t/p/w300/${media.poster_path}`}
               url={`/${media.id}`}
               key={media.id}
