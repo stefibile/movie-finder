@@ -12,6 +12,7 @@ const CardGenre = ({ mediaType }) => {
   const paginationHandleForward = () => setPage(page + 1);
 
   return (
+    // excelente
     <div className="genre-section">
       <CardContainer title={params.genre} mediaType={mediaType} url={params.genre} reel="isNotReel" page={page} />
       <div className="pagination">
